@@ -27,7 +27,7 @@ module.exports = {
             moduleDoc: module,
             area: module.area,
             components: docs,
-            outputPath: _.template('${base}/${module.area}/${module.name}/${docType}/index.html', {
+            outputPath: _.template('${base}/${module.area}/${module.name}/${docType}/index.md', {
               module: module, 
               docType: docType ,
               base: processorConfig.outputPathBase || 'partials'

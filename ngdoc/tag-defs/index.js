@@ -58,12 +58,12 @@ module.exports = [
       if ( doc.area === 'api' && doc.docType !== 'overview' ) {
         if ( doc.docType === 'module' ) {
           doc.id = _.template('module:${name}', doc);
-          doc.outputPath = _.template('${area}/${name}/index.html', doc);
+          doc.outputPath = _.template('${area}/${name}/index.md', doc);
           doc.path = _.template('${area}/${name}', doc);
 
         } else if ( doc.name.indexOf('#' ) === -1 ) {
           doc.id = _.template('module:${module}.${docType}:${name}', doc);
-          doc.outputPath = _.template('${area}/${module}/${docType}/${name}/index.html', doc);
+          doc.outputPath = _.template('${area}/${module}/${docType}/${name}/index.md', doc);
           doc.path = _.template('${area}/${module}/${docType}/${name}', doc);
 
         } else {
@@ -89,7 +89,7 @@ module.exports = [
         if ( doc.fileName !== 'index' ) {
           doc.path += '/' + doc.fileName;
         }
-        doc.outputPath = doc.path + '.html';
+        doc.outputPath = doc.path + '.md';
       }
 
       if ( doc.outputPath ) {
