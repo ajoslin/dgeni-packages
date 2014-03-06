@@ -54,7 +54,7 @@ module.exports = [
   {
     name: 'id',
     defaultFn: function(doc) {
-      var parts, partialFolder = 'partials';
+      var parts, partialFolder = 'docs/angularjs';
       if ( doc.area === 'api' && doc.docType !== 'overview' ) {
         if ( doc.docType === 'module' ) {
           doc.id = _.template('module:${name}', doc);
@@ -63,7 +63,7 @@ module.exports = [
 
         } else if ( doc.name.indexOf('#' ) === -1 ) {
           doc.id = _.template('module:${module}.${docType}:${name}', doc);
-          doc.outputPath = _.template('${area}/${module}/${docType}/${name}.html', doc);
+          doc.outputPath = _.template('${area}/${module}/${docType}/${name}/index.html', doc);
           doc.path = _.template('${area}/${module}/${docType}/${name}', doc);
 
         } else {
