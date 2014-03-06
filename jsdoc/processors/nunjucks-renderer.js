@@ -61,7 +61,6 @@ var plugin = module.exports = {
       try {
         data = _.defaults(Object.create(null), { doc: doc, docs: docs }, extraData, helpers);
         var templateFile = templateFinder(data.doc);
-        console.log(templateFile);
         doc.renderedContent = env.render(templateFile, data);
       } catch(ex) {
         console.log(_.omit(doc, ['content', 'moduleDoc', 'components', 'serviceDoc', 'providerDoc']));
