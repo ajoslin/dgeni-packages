@@ -22,7 +22,7 @@ module.exports = {
           };
         }
         
-        return _.template('<a href="${url}">${title}</a>', linkInfo);
+        return _.template('<a href="/docs/angularjs/${url}">${title}</a>', linkInfo);
       });
     };
   }
